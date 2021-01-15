@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddNoteActivity">
+
+    <Toolbar
+        android:id="@+id/toolbar_addtask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/my_primary_color"
+        android:elevation="4dp"
+        android:title="@string/app_name"
+        android:titleTextColor="@color/white" />
+
+    <EditText
+        android:id="@+id/edt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_addtask"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="8dp"
+        android:background="@drawable/shape"
+        android:hint="Enter Note title"
+        android:inputType="text"
+        android:minHeight="70dp"
+        android:paddingHorizontal="12dp"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edt_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_title"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/shape"
+        android:textSize="20sp"
+        android:hint="Enter task description"
+        android:inputType="text"
+        android:minHeight="120dp"
+        android:paddingHorizontal="12dp" />
+
+    <TextView
+        android:id="@+id/txt_importance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Importance"
+        android:layout_below="@id/edt_description"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:layout_marginLeft="20dp"/>
+    <RadioGroup
+        android:id="@+id/rgb_importance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_importance"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="20dp">
+
+        <RadioButton
+            android:id="@+id/rb_simple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Simple"
+            android:textSize="18sp" />
+        <RadioButton
+            android:id="@+id/rb_important"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Important"
+            android:textSize="18sp" />
+        <RadioButton
+            android:id="@+id/rb_very_important"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Very important"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rgb_importance"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="20dp"
+        android:inputType="text"
+        android:text="add" />
+
+</RelativeLayout>
